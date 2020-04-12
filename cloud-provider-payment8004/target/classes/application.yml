@@ -1,0 +1,17 @@
+server:
+  port: 8004
+
+spring:
+  application:
+    name: cloud-provider-payment
+  cloud:
+    consul:
+      host: 192.168.1.14
+      port: 8500
+      discovery:
+        service-name: cloud-service-payment
+        prefer-ip-address: true
+        heartbeat:
+          enabled: true
+
+        health-check-path: health
